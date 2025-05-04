@@ -1,0 +1,249 @@
+/* RecentCourses.module.css */
+
+.recentCourses {
+  padding: 40px 0;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.viewAllContainer {
+  position: absolute;
+  right: 20px;
+  top: 8px;
+}
+
+.viewAllBtn {
+  background-color: transparent;
+  color: #0066cc;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.viewAllBtn:hover {
+  color: #004d99;
+}
+
+.coursesSlider {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 0;
+  gap: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+  cursor: grab;
+}
+
+.coursesSlider::-webkit-scrollbar {
+  height: 6px;
+}
+
+.coursesSlider::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.coursesSlider::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.coursesSlider:active {
+  cursor: grabbing;
+}
+
+.courseCard {
+  min-width: 280px;
+  max-width: 280px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.courseCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.courseContent {
+  padding: 20px;
+  position: relative;
+  background-color: #0066cc;
+  color: white;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.courseTitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.courseType {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.premiumTag {
+  background-color: #ffd700;
+  color: #333;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.featuredTag {
+  background-color: #ff5722;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.bookmarkBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.bookmarkBtn:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.courseInfo {
+  padding: 15px 20px;
+}
+
+.courseDescription {
+  font-size: 14px;
+  color: #555;
+  margin-top: 0;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.courseMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #666;
+}
+
+.duration {
+  background-color: #e9f5ff;
+  color: #0066cc;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-weight: 500;
+}
+
+.instructor {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+
+.courseFooter {
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+  font-size: 14px;
+  color: #666;
+}
+
+.level {
+  background-color: #f0f0f0;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-weight: 500;
+}
+
+.noCourses {
+  text-align: center;
+  padding: 40px 0;
+  color: #666;
+  font-size: 16px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .courseCard {
+    min-width: 240px;
+    max-width: 240px;
+  }
+  
+  .title {
+    font-size: 24px;
+  }
+  
+  .courseContent {
+    min-height: 70px;
+  }
+  
+  .courseTitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .courseCard {
+    min-width: 220px;
+    max-width: 220px;
+  }
+  
+  .courseMeta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .recentCourses {
+    padding: 30px 0;
+  }
+}
